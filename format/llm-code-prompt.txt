@@ -1,0 +1,66 @@
+TASK
+Write a complete, runnable program that solves Sequential Ordering Problem (SOP)
+instances from .sop files, plus documentation explaining how to run it.
+
+LANGUAGE AND ALGORITHM
+You choose both. Pick whatever language and algorithm gives the best balance of
+solution quality (lowest cost, proven optimal where feasible) and runtime for
+instances of this kind, ranging from small (N ~ 40) to larger ones. Briefly justify
+your choices.
+
+FILE FORMAT
+The file is TSPLIB-style: a metadata header, then the matrix, then an optional EOF.
+- Header lines (NAME, TYPE, COMMENT, DIMENSION, EDGE_WEIGHT_TYPE, EDGE_WEIGHT_FORMAT)
+  are metadata. Parse them by keyword. COMMENT is free text.
+- DIMENSION is the number of nodes N.
+- EDGE_WEIGHT_SECTION is followed by N again, then N x N integers (a FULL_MATRIX)
+  that may wrap across lines. The file may end with an EOF line, but not all
+  instances have one. Do not depend on it: read exactly N x N values after the
+  repeated dimension, and tolerate trailing blank lines or end-of-file with no
+  terminator.
+- Nodes are indexed 0..N-1 by matrix row/column order.
+
+MATRIX SEMANTICS (T = the matrix)
+- T[i][j] >= 0: cost of going directly from node i to node j.
+- T[i][j] < 0: precedence constraint. Node i depends on node j, so j must come
+  before i. The negative value is not a cost.
+- The diagonal is 0 and is ignored.
+- A very large value (e.g. 10000000) is just a large cost, typically the direct
+  first-to-last edge, which a valid path never uses.
+
+PROBLEM REQUIREMENTS
+- Find a Hamiltonian path visiting every node exactly once and satisfying all
+  precedence constraints.
+- The start and end nodes are determined by the constraints. Derive them from the
+  matrix, do not hardcode them.
+- Minimize the sum of T[a][b] over consecutive nodes.
+
+PROGRAM REQUIREMENTS
+- Command-line use: accepts one or more input .sop files, an optional time limit in
+  seconds, and an optional output CSV path (default: print to stdout).
+- Parse robustly (the matrix may span multiple lines).
+- Include a validity check on the final path (permutation, precedence, cost
+  recomputed from scratch).
+- Report whether the solution is proven optimal or best found within the time limit.
+- Clear comments.
+
+OUTPUT (CSV, header row, one row per instance)
+Instance,Instance Size,Time,Enumerated Nodes,Best Cost,Best Path
+- Instance: input file name
+- Instance Size: N
+- Time: wall-clock seconds to produce the reported solution
+- Enumerated Nodes: number of search nodes explored (define it in the README if the
+  algorithm isn't tree search)
+- Best Cost: cost of the resulting path
+- Best Path: node indices in order, space-separated, 0-based
+
+DELIVERABLES
+1. The full source code (complete files, not snippets).
+2. A README.md containing:
+   - Overview of the algorithm and why it was chosen
+   - Requirements and installation (language version, build steps if compiled,
+     packages)
+   - Exact commands to build and run, with an example
+   - Input and output format description
+   - A sample output row
+   - Known limitations (instance sizes where it becomes slow, optimality guarantees)

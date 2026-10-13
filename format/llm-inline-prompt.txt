@@ -1,0 +1,49 @@
+TASK
+Solve the Sequential Ordering Problem (SOP) instance in the attached .sop file.
+Use any method you like: exact, heuristic, metaheuristic, or a combination. You may
+write and run code in any language, use any libraries, and choose your own time budget.
+Aim for the lowest-cost valid path you can find, and prove optimality if you can.
+
+FILE FORMAT
+The file is TSPLIB-style: a metadata header, then the matrix, then an optional EOF.
+- Header lines (NAME, TYPE, COMMENT, DIMENSION, EDGE_WEIGHT_TYPE, EDGE_WEIGHT_FORMAT)
+  are metadata. Read them by keyword. COMMENT is free text.
+- DIMENSION is the number of nodes N.
+- EDGE_WEIGHT_SECTION is followed by N again, then N x N integers (a FULL_MATRIX)
+  that may wrap across lines. The file may end with an EOF line, but not all
+  instances have one. Do not depend on it: read exactly N x N values after the
+  repeated dimension, and tolerate trailing blank lines or end-of-file with no
+  terminator.
+- Nodes are indexed 0..N-1 by matrix row/column order.
+
+MATRIX SEMANTICS (T = the matrix)
+- T[i][j] >= 0: cost of going directly from node i to node j.
+- T[i][j] < 0: precedence constraint. Node i depends on node j, so j must appear
+  before i in the path. The negative value is not a cost.
+- The diagonal is 0 and is ignored.
+- A very large value (e.g. 10000000) is just a large cost. Typically it is the
+  direct first-to-last edge, which a valid path never uses.
+
+SOLUTION REQUIREMENTS
+- A Hamiltonian path: every node exactly once.
+- Every precedence constraint satisfied.
+- The start and end nodes are determined by the constraints. Derive them from the
+  matrix, do not hardcode them.
+- Cost = sum of T[a][b] over consecutive nodes a -> b in the path.
+- Verify validity (permutation, precedence, cost recomputed from scratch) before
+  reporting.
+
+DELIVERABLE
+A CSV with a header row and one data row per instance:
+
+Instance,Instance Size,Time,Enumerated Nodes,Best Cost,Best Path
+
+- Instance: input file name
+- Instance Size: N
+- Time: wall-clock seconds to produce the reported solution
+- Enumerated Nodes: number of search nodes explored (for non-tree-search methods,
+  say what you counted instead)
+- Best Cost: cost of the best path
+- Best Path: node indices in visiting order, space-separated, 0-based
+
+Also state the method used and whether the result is proven optimal or best found.

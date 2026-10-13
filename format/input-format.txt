@@ -1,0 +1,19 @@
+You will be given an input .sop file
+Number after EDGE_WEIGHT_SECTION is the Dimension
+Values following is an adjacency matrix of an instance of the Sequential Ordering Problem 
+The resulting path shoud be a Hamiltonian path
+if the value in the matrix is >= 0 this represents an edge weight 
+else this represents a precendence constraint where if T[i][j] < 0 
+  i is dependent on node j or j must come before i 
+
+Given an instance of this matrix, give me the ... 
+Instance, Dimension, Time, Enumerated-Nodes, Best-Cost, Best-Path
+
+output format below
+Return a csv that has the respective fields
+Instance: name of the input file
+Instance Size: dimension or number of Nodes
+Time: time it took to create a solution
+Enumerated Nodes: How many nodes were covered over when finding solution
+Best Cost: cost of the resulting path
+Best Path: the sequence of order of the nodes in the resulting lowest cost path.
