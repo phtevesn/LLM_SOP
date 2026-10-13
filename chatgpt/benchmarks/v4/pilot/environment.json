@@ -1,0 +1,17 @@
+{
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "seed_override": 17,
+  "seconds_per_instance": 3.0,
+  "repeats": 2,
+  "threads_v2": 4,
+  "inputs": {
+    "ry48p.1.sop": "a402b82325cc2566ae3c808efc1e91f4de3443f52d6ce6500a6307ec98fbc2fe",
+    "synthetic_100_metric_0.01.sop": "16b63e5ff06c98a9fc804be911c4f061dbe4c4dbc75681ef33e2e27feeac427a",
+    "synthetic_200_random_0.15.sop": "1e8bdb104aa47c071620ca0018e7a210a20216fc673063931856f450561bc21c"
+  },
+  "executables": {
+    "/tmp/sop_before_pass": "145fc94f779d14c0418a28e9f698cd9aeef4ce158175b1b9a3e42f9e20542513",
+    "sop_solver/sop_solver": "0e109c86a304bf41d6040ba9c6ba99dd315e9bc0f6cd0186ae5945f6d563b840"
+  }
+}

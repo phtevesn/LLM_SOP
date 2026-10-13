@@ -1,0 +1,20 @@
+{
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "seed_override": 17,
+  "seconds_per_instance": 3.0,
+  "repeats": 3,
+  "solver_threads": 4,
+  "baseline_threads": 4,
+  "inputs": {
+    "ry48p.1.sop": "a402b82325cc2566ae3c808efc1e91f4de3443f52d6ce6500a6307ec98fbc2fe",
+    "R.700.1000.60.sop": "d0e073d15a4595694b5cf774cf61cea32703df9770c778d5ecdd940126bd3b5c",
+    "synthetic_100_metric_0.01.sop": "16b63e5ff06c98a9fc804be911c4f061dbe4c4dbc75681ef33e2e27feeac427a",
+    "synthetic_200_random_0.15.sop": "1e8bdb104aa47c071620ca0018e7a210a20216fc673063931856f450561bc21c",
+    "synthetic_40_random_0.02.sop": "3d3519cad8c5f9db01e5fa025f2b1052bc5f01022586243a5cd7abd8abb6ce5d"
+  },
+  "executables": {
+    "/tmp/sop_before_pass": "145fc94f779d14c0418a28e9f698cd9aeef4ce158175b1b9a3e42f9e20542513",
+    "sop_solver/sop_solver": "0a6f782d89664925f11dd6f5278c6ae6c14849735169c49908fd31e2ca010e81"
+  }
+}

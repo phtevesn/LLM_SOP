@@ -1,0 +1,6 @@
+{
+  "machine": "x86_64",
+  "processor": "x86_64",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "cpu_quota": "800000 100000"
+}

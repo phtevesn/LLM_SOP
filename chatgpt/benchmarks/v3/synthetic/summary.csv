@@ -1,0 +1,17 @@
+Solver,Repeat,Instance,N,Seconds,Process Seconds,Nodes,Cost,Proven Optimal,Validated
+previous,1,synthetic_100_metric_0.01.sop,100,3.027781,3.031167,1721641,10610,False,True
+final,1,synthetic_100_metric_0.01.sop,100,3.293120,3.298330,1694770,10695,False,True
+previous,1,synthetic_160_metric_0.02.sop,160,3.021877,3.024516,721285,16735,False,True
+final,1,synthetic_160_metric_0.02.sop,160,3.158608,3.164218,691364,16820,False,True
+previous,1,synthetic_200_random_0.05.sop,200,3.035224,3.038358,615757,11286,False,True
+final,1,synthetic_200_random_0.05.sop,200,3.181113,3.186741,640406,10737,False,True
+previous,1,synthetic_200_random_0.15.sop,200,3.003490,3.006600,174886,20307,False,True
+final,1,synthetic_200_random_0.15.sop,200,3.017930,3.021702,167818,21828,False,True
+previous,1,synthetic_300_random_0.30.sop,300,3.000931,3.004167,225067,59576,False,True
+final,1,synthetic_300_random_0.30.sop,300,0.028754,0.031018,23441,58959,True,True
+previous,1,synthetic_40_random_0.02.sop,40,0.339504,0.342298,13497,2165,True,True
+final,1,synthetic_40_random_0.02.sop,40,0.329571,0.332036,13370,2165,True,True
+previous,1,synthetic_60_random_0.10.sop,60,3.013490,3.016109,969708,5481,False,True
+final,1,synthetic_60_random_0.10.sop,60,3.089210,3.093736,894946,5494,False,True
+previous,1,synthetic_700_random_0.60.sop,700,3.002463,3.006585,1217831,256428,False,True
+final,1,synthetic_700_random_0.60.sop,700,0.039634,0.042200,2451,256112,True,True

@@ -1,0 +1,5 @@
+Solver,Repeat,Instance,N,Seconds,Process Seconds,Nodes,Cost,Proven Optimal,Validated
+baseline,1,ry48p.1.sop,49,5.000008,5.009667,4554308,15805,False,True
+v2,1,ry48p.1.sop,49,5.030065,5.033307,1433600,15805,False,True
+baseline,1,R.700.1000.60.sop,700,5.001688,5.004745,283546,246910,False,True
+v2,1,R.700.1000.60.sop,700,5.001997,5.005153,638976,245673,False,True

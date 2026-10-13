@@ -1,0 +1,1 @@
+R.700.1000.60.sop: independently proven optimum=245589; expanded=2683; peak_layer_states=20; seconds=0.330786

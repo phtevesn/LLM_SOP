@@ -1,0 +1,13 @@
+Solver,Repeat,Instance,N,Seconds,Process Seconds,Nodes,Cost,Proven Optimal,Validated
+v3,1,ry48p.1.sop,49,3.101881,3.109102,547179,15839,False,True
+candidate,1,ry48p.1.sop,49,3.149611,3.165225,1439266,15839,False,True
+v3,1,synthetic_100_metric_0.01.sop,100,3.097776,3.109723,459579,10610,False,True
+candidate,1,synthetic_100_metric_0.01.sop,100,3.046118,3.051481,192911,10610,False,True
+v3,1,synthetic_200_random_0.15.sop,200,3.010369,3.015968,61095,20825,False,True
+candidate,1,synthetic_200_random_0.15.sop,200,3.016470,3.023749,53167,20631,False,True
+candidate,2,ry48p.1.sop,49,3.108776,3.115783,1225574,15839,False,True
+v3,2,ry48p.1.sop,49,3.302064,3.308336,1050698,15839,False,True
+candidate,2,synthetic_100_metric_0.01.sop,100,3.279260,3.301286,860125,10610,False,True
+v3,2,synthetic_100_metric_0.01.sop,100,3.114444,3.122259,355716,10610,False,True
+candidate,2,synthetic_200_random_0.15.sop,200,3.011802,3.018017,60520,21901,False,True
+v3,2,synthetic_200_random_0.15.sop,200,3.011229,3.016459,53838,21480,False,True

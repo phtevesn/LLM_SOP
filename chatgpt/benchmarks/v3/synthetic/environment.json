@@ -1,0 +1,22 @@
+{
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "seed_override": null,
+  "seconds_per_instance": 3.0,
+  "repeats": 1,
+  "threads_v2": 4,
+  "inputs": {
+    "synthetic_100_metric_0.01.sop": "16b63e5ff06c98a9fc804be911c4f061dbe4c4dbc75681ef33e2e27feeac427a",
+    "synthetic_160_metric_0.02.sop": "27d7b64829a2ba4154d38276b827021877d77b1dd8783faef46ba7a43e45c477",
+    "synthetic_200_random_0.05.sop": "53898acbcf2795dc282801ff2f56b70351c92e893cdeb85bcae8188d217e71b5",
+    "synthetic_200_random_0.15.sop": "1e8bdb104aa47c071620ca0018e7a210a20216fc673063931856f450561bc21c",
+    "synthetic_300_random_0.30.sop": "da6fbee3f6505305266371c09db7ff50a7b576abe28c2bd606e0f198bdadaa08",
+    "synthetic_40_random_0.02.sop": "3d3519cad8c5f9db01e5fa025f2b1052bc5f01022586243a5cd7abd8abb6ce5d",
+    "synthetic_60_random_0.10.sop": "5667f26723af5eb080e4d6bf61887784ce75d3089fe7e2453d6bec265e4a41c4",
+    "synthetic_700_random_0.60.sop": "b625d3e29551355169a6983e219c7e7fd8f7e272cce1f6b69651449471692620"
+  },
+  "executables": {
+    "/tmp/sop_v2": "17ab1d55dc2d7f0a6bc58b74fb18c1ba9136acc1cfeb5187b207a698e4aa7836",
+    "sop_solver/sop_solver": "f78dd96dab657a686d39859d8757c9ac897c0ce1d93e3856a2008605e44716fc"
+  }
+}
