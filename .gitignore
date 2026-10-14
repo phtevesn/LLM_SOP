@@ -55,6 +55,20 @@ coverage.xml
 *.out
 *.app/
 
+# Solver binaries without file extensions
+**/ils
+**/sop_solver
+**/previous_solver
+**/test_bounds
+**/test_engines
+
+# Local build artifacts produced by the all-solvers runner
+*.bin
+*.build.log
+
+# Claude iteration 1 writes this intermediate matrix in its working directory
+llm-algorithms/claude-iter-1/inst.txt
+
 # Debug symbols
 *.pdb
 *.ilk
@@ -100,6 +114,9 @@ results/
 output/
 outputs/
 logs/
+
+# Runtime and benchmark logs
+*.log
 
 # Generated solution files
 *.sol
