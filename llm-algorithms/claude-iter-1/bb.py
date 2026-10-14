@@ -3,9 +3,17 @@ from scipy.optimize import linear_sum_assignment
 from parse import load
 
 if len(sys.argv) != 3:
-    raise SystemExit(f"Usage: {sys.argv[0]} UPPER_BOUND INPUT.sop")
+    if len(sys.argv) != 4:
+        raise SystemExit(f"Usage: {sys.argv[0]} UPPER_BOUND INPUT.sop [TIME_LIMIT_SECONDS]")
 
 UB=int(sys.argv[1])
+try:
+    time_limit=float(sys.argv[3]) if len(sys.argv) == 4 else 3600.0
+except ValueError:
+    raise SystemExit("TIME_LIMIT_SECONDS must be a number")
+if time_limit <= 0:
+    raise SystemExit("TIME_LIMIT_SECONDS must be positive")
+t0=time.monotonic(); deadline=t0+time_limit
 N,T,h=load(sys.argv[2])
 pred=[set(j for j in range(N) if j!=i and T[i][j]<0) for i in range(N)]
 # transitive closure
@@ -39,7 +47,8 @@ for i in range(N):
         if i!=j and i in anc[j]:
             if any((i in anc[k]) and (k in anc[j]) for k in range(N)): C[i][j]=BIG
 nodes=0
-best=[UB+1,None]; t0=time.time()
+timed_out=False
+best=[UB+1,None]
 def valid(path):
     pos={v:i for i,v in enumerate(path)}
     return all(pos[j]<pos[i] for i in range(N) for j in anc[i])
@@ -52,7 +61,10 @@ def cycles(succ):
             cs.append(c)
     return cs
 def solve(Cm):
-    global nodes
+    global nodes, timed_out
+    if timed_out or time.monotonic() >= deadline:
+        timed_out=True
+        return
     nodes+=1
     r,c=linear_sum_assignment(Cm)
     lb=Cm[r,c].sum()
@@ -76,10 +88,16 @@ def solve(Cm):
     # branch: exclude arc k, force arcs before k (by BIG on alternatives)
     Cc=Cm.copy()
     for (a,b) in cs_arcs:
+        if time.monotonic() >= deadline:
+            timed_out=True
+            return
         C2=Cc.copy(); C2[a][b]=BIG
         solve(C2)
+        if timed_out:
+            return
         # force arc (a,b) for subsequent branches
         Cc[a,:]=BIG; Cc[:,b]=BIG; Cc[a][b]=Cm[a][b]
 solve(C)
-print("RESULT best",best[0] if best[1] else f">={UB}", "nodes",nodes,"time",round(time.time()-t0,2))
+status="TIME_LIMIT" if timed_out else "COMPLETE"
+print("RESULT",status,"best",best[0] if best[1] else f">={UB}", "nodes",nodes,"time",round(time.monotonic()-t0,2))
 print(best[1])
