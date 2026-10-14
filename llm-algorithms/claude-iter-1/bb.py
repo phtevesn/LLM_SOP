@@ -1,7 +1,12 @@
 import numpy as np, time, sys
 from scipy.optimize import linear_sum_assignment
 from parse import load
-N,T,h=load('/mnt/user-data/uploads/prob_42.sop')
+
+if len(sys.argv) != 3:
+    raise SystemExit(f"Usage: {sys.argv[0]} UPPER_BOUND INPUT.sop")
+
+UB=int(sys.argv[1])
+N,T,h=load(sys.argv[2])
 pred=[set(j for j in range(N) if j!=i and T[i][j]<0) for i in range(N)]
 # transitive closure
 anc=[set(p) for p in pred]
@@ -33,7 +38,7 @@ for i in range(N):
     for j in range(N):
         if i!=j and i in anc[j]:
             if any((i in anc[k]) and (k in anc[j]) for k in range(N)): C[i][j]=BIG
-UB=int(sys.argv[1]); nodes=0
+nodes=0
 best=[UB+1,None]; t0=time.time()
 def valid(path):
     pos={v:i for i,v in enumerate(path)}
