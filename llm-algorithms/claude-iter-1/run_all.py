@@ -29,7 +29,7 @@ def resolve_instance(raw: str) -> Optional[Path]:
     repaired = repaired.replace("LLM_SOPsoplib", "LLM_SOP/soplib")
     repaired_path = Path(os.path.expanduser(repaired))
     candidates.append(repaired_path)
-    if repaired_path.suffix == "":
+    if not str(repaired_path).endswith(".sop"):
         candidates.append(Path(str(repaired_path) + ".sop"))
 
     for candidate in candidates:

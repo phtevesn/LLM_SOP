@@ -1,0 +1,165 @@
+
+# ==========================================
+# Python
+# ==========================================
+
+# Bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+.python-version
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ==========================================
+# C++
+# ==========================================
+
+# Compiled object files
+*.o
+*.obj
+*.lo
+
+# Libraries
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+*.app/
+
+# Debug symbols
+*.pdb
+*.ilk
+*.dSYM/
+
+# Precompiled headers
+*.gch
+*.pch
+
+# ==========================================
+# Build Systems
+# ==========================================
+
+# Build directories
+build/
+build-*/
+cmake-build-*/
+Debug/
+Release/
+x64/
+bin/
+obj/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+!src/Makefile
+
+# Ninja
+.ninja_deps
+.ninja_log
+build.ninja
+
+# ==========================================
+# SOP Solver Outputs
+# ==========================================
+
+# Solver results
+results/
+output/
+outputs/
+logs/
+
+# Generated solution files
+*.sol
+*.solution
+
+# Benchmark and profiling output
+benchmarks/results/
+profiles/
+*.prof
+*.profraw
+*.profdata
+gmon.out
+callgrind.out.*
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ==========================================
+# IDE / Editor
+# ==========================================
+
+# Visual Studio Code
+.vscode/*
+!.vscode/extensions.json
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# JetBrains / CLion / PyCharm
+.idea/
+*.iml
+
+# ==========================================
+# Operating Systems
+# ==========================================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Linux
+.directory
+
+# ==========================================
+# Environment / Secrets
+# ==========================================
+
+.env
+.env.*
+!.env.example
+*.local

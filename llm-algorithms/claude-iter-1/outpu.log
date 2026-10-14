@@ -1,0 +1,10 @@
+
+===== /home/researchers/steveninouye/algorithms/LLM_SOP/tsplib/prob.42.sop =====
+BEST 243 time_to_best 0.453 iters 8290 evals 568087599 valid 1
+0 11 4 13 7 27 34 6 22 19 33 16 25 24 39 1 36 32 18 38 5 2 8 23 3 35 15 9 14 10 20 12 30 31 26 17 28 21 40 29 37 41 
+start [0] end [41]
+found 243
+RESULT COMPLETE best 243 nodes 1882185 time 62.02
+[0, 11, 4, 13, 7, 27, 34, 6, 22, 19, 33, 16, 25, 24, 39, 1, 36, 32, 18, 38, 5, 2, 8, 23, 3, 35, 15, 9, 14, 10, 20, 12, 30, 31, 26, 17, 28, 21, 40, 29, 37, 41]
+
+===== /home/researchers/steveninouye/algorithms/LLM_SOP/tsplib/p43.3.sop =====
