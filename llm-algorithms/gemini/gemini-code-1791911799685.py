@@ -385,18 +385,32 @@ def main():
         sys.exit(1)
         
     fieldnames = ["Instance", "Instance Size", "Time", "Enumerated Nodes", "Best Cost", "Best Path"]
+
+    # solve_sop uses descriptive internal keys; translate them to the shared
+    # CSV schema used by the other SOP solvers.
+    csv_results = [
+        {
+            "Instance": r["instance"],
+            "Instance Size": r["size"],
+            "Time": r["time"],
+            "Enumerated Nodes": r["enumerated_nodes"],
+            "Best Cost": r["best_cost"],
+            "Best Path": r["best_path"],
+        }
+        for r in results
+    ]
     
     if args.output:
         with open(args.output, mode="w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for r in results:
+            for r in csv_results:
                 writer.writerow(r)
         print(f"Results successfully written to {args.output}")
     else:
         writer = csv.DictWriter(sys.stdout, fieldnames=fieldnames)
         writer.writeheader()
-        for r in results:
+        for r in csv_results:
             writer.writerow(r)
 
 if __name__ == "__main__":

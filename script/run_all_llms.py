@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Iterable, Optional
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_INSTANCES = ROOT / "results" / "llm-env-resultsv1.1" / "instances.txt"
 DEFAULT_OUTPUT = ROOT / "results" / "llm-env-resultsv1.1" / "llm-runs"
 
