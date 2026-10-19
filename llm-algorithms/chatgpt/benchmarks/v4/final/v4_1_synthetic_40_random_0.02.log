@@ -1,1 +1,0 @@
-/workspace/scratch/93fb2e236dad/synthetic_inputs/synthetic_40_random_0.02.sop: OPTIMAL (proven); cost=2165; start=34; end=17; lower_bound=2165; gap_percent=0; dominated=130; bound_prunes=125478; assignment_repairs=8771; local_prunes=36; donated_tasks=85

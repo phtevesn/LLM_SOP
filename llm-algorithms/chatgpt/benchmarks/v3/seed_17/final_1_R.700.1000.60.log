@@ -1,1 +1,0 @@
-/workspace/scratch/93fb2e236dad/bench_inputs/R.700.1000.60.sop: OPTIMAL (proven); cost=245589; start=0; end=699; lower_bound=245589; gap_percent=0; dominated=0; bound_prunes=0; assignment_repairs=0; local_prunes=0; donated_tasks=0

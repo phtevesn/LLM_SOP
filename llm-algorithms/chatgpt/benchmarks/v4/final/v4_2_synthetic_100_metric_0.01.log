@@ -1,1 +1,0 @@
-/workspace/scratch/93fb2e236dad/synthetic_inputs/synthetic_100_metric_0.01.sop: TIME_LIMIT (best found; not proven optimal); cost=10610; start=74; end=68; lower_bound=6857; gap_percent=35.3723; dominated=7430; bound_prunes=5539140; assignment_repairs=335980; local_prunes=60081; donated_tasks=4
