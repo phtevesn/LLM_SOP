@@ -1,2 +1,10 @@
 /home/researchers/steveninouye/algorithms/LLM_SOP/tsplib/prob.42.sop
 /home/researchers/steveninouye/algorithms/LLM_SOP/tsplib/p43.3.sop
+/home/researchers/steveninouye/algorithms/LLM_SOPtsplib/ft70.4.sop
+/home/researchers/steveninouye/algorithms/LLM_SOPtsplib/rbg048a.sop
+/home/researchers/steveninouye/algorithms/LLM_SOPtsplib/rbg253a.sop
+/home/researchers/steveninouye/algorithms/LLM_SOPsoplib/R.200.1000.1
+/home/researchers/steveninouye/algorithms/LLM_SOPsoplib/R.300.100.15
+/home/researchers/steveninouye/algorithms/LLM_SOPsoplib/R.300.1000.15
+/home/researchers/steveninouye/algorithms/LLM_SOPsoplib/R.400.100.15
+/home/researchers/steveninouye/algorithms/LLM_SOPsoplib/R.400.1000.15

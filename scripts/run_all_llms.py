@@ -138,7 +138,12 @@ def write_paths(path: Path, instances: Iterable[Path]) -> None:
 
 
 def run_standard_solvers(
-    instances: list[Path], output_dir: Path, seconds: float, *, claude1_seconds: float
+    instances: list[Path],
+    output_dir: Path,
+    seconds: float,
+    *,
+    claude1_heuristic_seconds: float,
+    claude1_bb_seconds: float,
 ) -> list[SolverResult]:
     paths = [str(instance) for instance in instances]
     results: list[SolverResult] = []
@@ -217,9 +222,9 @@ def run_standard_solvers(
                         continue
                     try:
                         ils = subprocess.run(
-                            [str(binary), str(claude1_seconds)],
+                            [str(binary), str(claude1_heuristic_seconds)],
                             cwd=temp_dir, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                            text=True, timeout=claude1_seconds + 60.0, check=False,
+                            text=True, timeout=claude1_heuristic_seconds + 60.0, check=False,
                         )
                         log.write(ils.stdout)
                     except subprocess.TimeoutExpired as exc:
@@ -233,9 +238,9 @@ def run_standard_solvers(
                         continue
                     try:
                         bb = subprocess.run(
-                            [sys.executable, str(source_dir / "bb.py"), match.group(1), str(instance), str(claude1_seconds)],
+                            [sys.executable, str(source_dir / "bb.py"), match.group(1), str(instance), str(claude1_bb_seconds)],
                             cwd=source_dir, stdout=log, stderr=log, text=True,
-                            timeout=claude1_seconds + 60.0, check=False,
+                            timeout=claude1_bb_seconds + 60.0, check=False,
                         )
                         failed |= bb.returncode != 0
                     except subprocess.TimeoutExpired:
@@ -249,12 +254,32 @@ def run_standard_solvers(
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--instances", type=Path, default=DEFAULT_INSTANCES)
-    parser.add_argument("--time-limit", type=float, default=60.0, help="seconds per instance for most solvers")
-    parser.add_argument("--claude1-time-limit", type=float, default=60.0)
+    parser.add_argument(
+        "--time-limit",
+        type=float,
+        default=3600.0,
+        help="seconds per instance for most solvers (default: 3600)",
+    )
+    parser.add_argument(
+        "--claude1-heuristic-time-limit",
+        type=float,
+        default=180.0,
+        help="seconds for Claude iteration 1 ILS heuristic (default: 180)",
+    )
+    parser.add_argument(
+        "--claude1-bb-time-limit",
+        type=float,
+        default=3600.0,
+        help="seconds for Claude iteration 1 branch-and-bound (default: 3600)",
+    )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--dry-run", action="store_true", help="resolve inputs and print planned commands without running")
     args = parser.parse_args()
-    if args.time_limit <= 0 or args.claude1_time_limit <= 0:
+    if (
+        args.time_limit <= 0
+        or args.claude1_heuristic_time_limit <= 0
+        or args.claude1_bb_time_limit <= 0
+    ):
         parser.error("time limits must be positive")
     if not args.instances.is_file():
         parser.error(f"instance list does not exist: {args.instances}")
@@ -273,7 +298,13 @@ def main() -> int:
         return 0
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    results = run_standard_solvers(instances, args.output_dir.resolve(), args.time_limit, claude1_seconds=args.claude1_time_limit)
+    results = run_standard_solvers(
+        instances,
+        args.output_dir.resolve(),
+        args.time_limit,
+        claude1_heuristic_seconds=args.claude1_heuristic_time_limit,
+        claude1_bb_seconds=args.claude1_bb_time_limit,
+    )
     summary = args.output_dir / "summary.csv"
     with summary.open("w", newline="") as stream:
         writer = csv.writer(stream)
