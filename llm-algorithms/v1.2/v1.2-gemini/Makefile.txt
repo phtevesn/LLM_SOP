@@ -1,0 +1,26 @@
+# Makefile for State-of-the-Art Parallel Exact SOP Solver
+# Target Architecture: AMD Ryzen Threadripper 2990WX (Zen+ / znver1, 32 Cores)
+
+CXX      := g++
+CXXFLAGS := -O3 -march=znver1 -mtune=znver1 -flto -pthread -std=c++20 -Wall -Wextra -DNDEBUG
+TARGET   := sop_solver
+SRC      := sop_solver.cpp
+
+.PHONY: all native debug clean
+
+# Default build tuned specifically for AMD Ryzen Threadripper 2990WX (Zen+)
+all: $(TARGET)
+
+$(TARGET): $(SRC)
+	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET)
+
+# Portable build for any host CPU architecture
+native: CXXFLAGS := -O3 -march=native -mtune=native -flto -pthread -std=c++20 -Wall -Wextra -DNDEBUG
+native: $(TARGET)
+
+# Debug build with symbols and address/undefined-behavior sanitizers
+debug: CXXFLAGS := -O0 -g3 -pthread -std=c++20 -Wall -Wextra -fsanitize=address,undefined
+debug: $(TARGET)
+
+clean:
+	rm -f $(TARGET)
