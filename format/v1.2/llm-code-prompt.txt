@@ -10,9 +10,8 @@ context limits that works, I will respond until you complete the development of 
 
 LANGUAGE AND ALGORITHM
 The language and algorithms you use are your choice. Pick whichever will create
-the best solution based on the TASK. However, this program will be run on an AMD Ryzen
-Threadripper 1950X (32 cores). Therefore, the final program MUST be parallelizable
-to take full advantage of the 32 cores.  
+the best solution based on the TASK. However, this program will be run on an AMD Ryzen Threadripper 
+2990WX (32 cores). Therefore, the final program MUST be parallelizable to take full advantage of the 32 cores.  
 
 FILE FORMAT 
 The file is TSPLIB-style: a metadata header, then the matrix, then an optional EOF.
@@ -85,4 +84,4 @@ DELIVERABLES
 1. The full source code (complete files, not snippets).
 2. README.md
 NOTE: attached are 3 examples of what the input looks like. Do not assume that is
-the maximum size of the input instances, the instances can scale to a max N = 1000.
+the maximum size of the input instances, the instances can scale up to a max N <= 1000.
