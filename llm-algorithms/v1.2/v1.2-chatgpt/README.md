@@ -1,6 +1,6 @@
 # SOP Exact
 
-A standalone C++20 exact Sequential Ordering Problem solver for Ubuntu, with
+A standalone C++17 exact Sequential Ordering Problem solver for Ubuntu, with
 parallel branch-and-bound, incremental integer assignment bounds, two complementary
 search engines, incumbent sharing, work stealing, and Linux NUMA-aware scheduling.
 No commercial optimizer, Python package, or third-party solver is required.
@@ -14,7 +14,7 @@ approximate pruning, floating-point objective, or fabricated optimality flag.
 
 ## Section 1: Requirements and installations required
 
-- Ubuntu Linux, 64-bit x86; GCC 11+ with C++20 and signed 128-bit integer support.
+- Ubuntu Linux, 64-bit x86; GCC 9+ with C++17 and signed 128-bit integer support.
 - GNU Make and POSIX threads (included in normal Ubuntu development tools).
 - Python 3.9+ for the optional tests and independent solution validator only.
 - Optional `numactl` and `lscpu` for checking CPU and memory topology.
@@ -26,7 +26,9 @@ sudo apt install build-essential python3 numactl
 
 No runtime dependencies beyond the C++ standard library and pthreads are used.
 The source was compiled and tested with GCC 13.3 on Ubuntu in the development
-environment. It has not been benchmarked on the user's actual 2990WX.
+environment, using C++17 mode. GCC 9 compatibility is based on the language and
+standard-library features used; GCC 9 itself was not available for testing.
+It has not been benchmarked on the user's actual 2990WX.
 
 Memory use includes approximately 8(N+1)^2 bytes **per worker** for private costs,
 shared input/precedence data, search states, and bounded history tables. At N=1000,
@@ -63,7 +65,7 @@ Optional native optimization (build on the machine that will execute it):
 
 ```bash
 make clean
-make CXXFLAGS='-O3 -DNDEBUG -std=c++20 -march=native -flto -pthread -Wall -Wextra -Wpedantic' LDFLAGS='-pthread -flto'
+make CXXFLAGS='-O3 -DNDEBUG -std=c++17 -march=native -flto -pthread -Wall -Wextra -Wpedantic' LDFLAGS='-pthread -flto'
 ```
 
 Additional tuning options:

@@ -2,7 +2,6 @@
 // Copyright (c) 2026. Released under the MIT license; see LICENSE.
 #include <algorithm>
 #include <atomic>
-#include <bit>
 #include <charconv>
 #include <cctype>
 #include <cstdlib>
@@ -204,7 +203,10 @@ struct History {
     void configure(size_t bytes,size_t w) {
         words=w;width=w+2;
         size_t count=bytes/(width*sizeof(uint64_t));
-        if(count>=4) capacity=std::bit_floor(count);
+        if(count>=4) {
+            capacity=1;
+            while(capacity<=count/2) capacity*=2;
+        }
     }
     static uint64_t hash(const State& st) {
         uint64_t h=uint64_t(st.last)+0x9e3779b97f4a7c15ULL;
