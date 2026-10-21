@@ -20,7 +20,7 @@ OUTPUT = ROOT / "results/llm-env-resultsv1.2"
 SOURCES = {
     "chatgpt": "v1.2-chatgpt/src/sop.cpp",
     "claude": "v1.2-claude/sop_solver.cpp",
-    "gemini": "v1.2-gemini/gemini-code-1792531916902.cpp",
+    "gemini": "v1.2-gemini/sop_solver.cpp",
 }
 HEADER = ["Instance", "Instance Size", "Time", "Enumerated Nodes",
           "Best Cost", "Best Path", "Optimal"]
