@@ -26,6 +26,27 @@ HEADER = ["Instance", "Instance Size", "Time", "Enumerated Nodes",
           "Best Cost", "Best Path", "Optimal"]
 
 
+def cxx_standard(solver: str, compiler: str) -> str:
+    """Select a compiler spelling supported by the selected toolchain."""
+    if solver != "chatgpt":
+        return "c++17"
+
+    # GCC 9 supports the C++20 draft mode as c++2a, but rejects c++20.
+    # Newer GCC releases and Clang accept the standardized spelling.
+    compiler_name = Path(compiler).name
+    if compiler_name.startswith("g++"):
+        try:
+            version = subprocess.run(
+                [compiler, "-dumpfullversion", "-dumpversion"],
+                capture_output=True, text=True, check=False,
+            ).stdout.strip().splitlines()[0]
+            if int(version.split(".", 1)[0]) < 10:
+                return "c++2a"
+        except (IndexError, ValueError, OSError):
+            pass
+    return "c++20"
+
+
 def read_instances(path: Path) -> list[Path]:
     instances = []
     errors = []
@@ -147,7 +168,7 @@ def main() -> int:
         for name, source in sources.items():
             solver_dir = run_dir / name
             binary = solver_dir / "solver.bin"
-            standard = "c++20" if name == "chatgpt" else "c++17"
+            standard = cxx_standard(name, compiler)
             build = [compiler, "-O3", "-DNDEBUG", f"-std={standard}", "-pthread", str(source), "-o", str(binary)]
             if args.dry_run:
                 print(shlex.join(build))
