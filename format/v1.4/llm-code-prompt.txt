@@ -4,7 +4,8 @@ Ordering Problem(SOP) instances from .sop files. This program should be able to
 find the optimal solution and be able to prove the result is optimal. This program
 should be the most robust, state-of-the-art, time efficient program possible while
 still finding the optimal solution. Include documentation explaining how to run it.
-This should be a complete, production-quality project with a deliberate architecture. 
+This should be a complete, production-quality project with a deliberate, modular, readable 
+architecture. 
 NOTE: This should be the BEST SOP program you can create against any instance I provide
 large or small instances, if you need me to respond for you to complete development due to rate or
 context limits that works, I will respond until you complete the development of the program.
@@ -13,7 +14,8 @@ LANGUAGE AND ALGORITHM
 The language and algorithms you use are your choice. Pick whichever will create
 the best solution based on the TASK. However, this program will be run on ubuntu on an AMD Ryzen Threadripper 
 2990WX (32 cores). Therefore, the final program MUST be parallelizable to take full advantage of the 32 cores.  
-Be aware of the NUMA topology this CPU uses.
+Be aware of the NUMA topology this CPU uses. The program must be able to compile with the
+g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0 compiler.
 
 FILE FORMAT 
 The file is TSPLIB-style: a metadata header, then the matrix, then an optional EOF.
@@ -60,6 +62,8 @@ PROGRAM REQUIREMENTS
 - When --output is given, write to the csv and to stdout, if the file exist append to it. 
 - The header is only written when the file is new or empty unless --no-header is given. stdout always 
   gets a header unless --no-header is given.
+- If you use an algorithm that tracks the current best cost, the program must log to stderr an update
+  in the best known cost including the new cost.
 
 OUTPUT (CSV, one data row per run, preceded by a header row unless --no-header is given)
 Instance,Instance Size,Time,Enumerated Nodes,Best Cost,Best Path,Optimal
