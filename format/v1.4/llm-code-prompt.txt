@@ -13,9 +13,8 @@ context limits that works, I will respond until you complete the development of 
 LANGUAGE AND ALGORITHM
 The language and algorithms you use are your choice. Pick whichever will create
 the best solution based on the TASK. However, this program will be run on ubuntu on an AMD Ryzen Threadripper 
-2990WX (32 cores). Therefore, the final program MUST be parallelizable to take full advantage of the 32 cores.  
-Be aware of the NUMA topology this CPU uses. The program must be able to compile with the
-g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0 compiler. You must use the C++17 standard.
+2990WX (32 cores) with 122Gi of memory. Therefore, the final program MUST be parallelizable to take 
+full advantage of the 32 cores.  Be aware of the NUMA topology this CPU uses. You must use the C++17 standard.
 
 FILE FORMAT 
 The file is TSPLIB-style: a metadata header, then the matrix, then an optional EOF.
@@ -90,5 +89,5 @@ DELIVERABLES
 1. The full source code (complete files, not snippets).
 2. README.md
 
-NOTE: attached are 3 examples of what the input looks like. Do not assume that is
-the maximum size of the input instances, the instances can scale up to a max N <= 1000.
+NOTE: attached are 3 examples of what the input looks like. the examples provided are
+not the largest instances, the instances can scale up to a max N <= 1000.
