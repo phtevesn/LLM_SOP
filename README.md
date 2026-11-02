@@ -2,7 +2,12 @@
 
 ## TODO
 
-- [ ] specify c++17
+- [x] specify c++17
+- [ ] list references used!
+- [ ] algorithm info
+  - [ ] if existing algorithms used, list those specific references
+  - [ ] otherwise, explain new algorithms
+  - focus on pruning techniques, main difference between different BnB algorithms
 
 ## Versions
 
