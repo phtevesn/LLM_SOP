@@ -1,0 +1,16 @@
+Review the program above in full. Produce an inventory table of every 
+algorithmic technique it uses, including small supporting ones (data structures,
+heuristics, numerical methods, tie-breaking or filtering logic).
+
+For each, give: (1) technique name; (2) where it appears in the code; 
+(3) classification: established named algorithm / adaptation of an established one / 
+custom heuristic; (4) your confidence in that classification and why; (5) the likely 
+original source as author + title + approximate year, plus search terms I can use 
+to verify it. If you derived this technique on your own use yourself as the author. If 
+there are multiple possiblities of sources, include all of them.
+
+Rules: don’t invent URLs or citations. If you aren’t sure of a source, say so. 
+Don’t call something original if it is a variation of a known method. Be explicit that 
+you’re describing what the code resembles, not recalling how you wrote it.
+
+Keep descriptions to 2–3 sentences each. I’ll ask for deeper write-ups on specific items afterward.
