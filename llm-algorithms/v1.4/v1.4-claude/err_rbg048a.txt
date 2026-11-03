@@ -1,0 +1,35 @@
+[    0.122s] instance rbg048a.sop: N=50
+[    0.123s] preprocessing: start=0 end=49 dummies=0
+[    0.123s] topology: 1 usable CPUs, 1 NUMA node ids (1 with memory)
+[    0.123s] phase 1: iterated local search on 4 thread(s) for up to 0.40s
+[    0.123s] new best cost: 387 (ILS)
+[    0.123s] new best cost: 376 (ILS)
+[    0.123s] new best cost: 374 (ILS)
+[    0.125s] new best cost: 353 (ILS)
+[    0.127s] new best cost: 351 (ILS)
+[    0.523s] phase 1 done: best cost 351
+[    0.523s] phase 2: branch-and-bound on 4 thread(s)
+[    0.523s] dominance table: 0.50 GiB
+[   10.523s] progress: 7544832 nodes, best cost 351, pool 0, idle 0
+[   20.523s] progress: 14589952 nodes, best cost 351, pool 0, idle 0
+[   30.523s] progress: 20922368 nodes, best cost 351, pool 0, idle 0
+[   40.524s] progress: 27869184 nodes, best cost 351, pool 0, idle 0
+[   50.524s] progress: 34299904 nodes, best cost 351, pool 0, idle 0
+[   60.524s] progress: 40689664 nodes, best cost 351, pool 0, idle 0
+[   70.524s] progress: 46538752 nodes, best cost 351, pool 0, idle 0
+[   80.524s] progress: 52600832 nodes, best cost 351, pool 0, idle 0
+[   90.524s] progress: 58318848 nodes, best cost 351, pool 0, idle 0
+[  100.525s] progress: 64143360 nodes, best cost 351, pool 0, idle 0
+[  110.525s] progress: 70025216 nodes, best cost 351, pool 0, idle 0
+[  120.525s] progress: 75661312 nodes, best cost 351, pool 0, idle 0
+[  130.525s] progress: 81600512 nodes, best cost 351, pool 0, idle 0
+[  140.525s] progress: 87318528 nodes, best cost 351, pool 0, idle 0
+[  150.525s] progress: 93093888 nodes, best cost 351, pool 0, idle 0
+[  160.525s] progress: 98516992 nodes, best cost 351, pool 0, idle 0
+[  170.526s] progress: 104103936 nodes, best cost 351, pool 0, idle 0
+[  180.526s] progress: 110002176 nodes, best cost 351, pool 0, idle 0
+[  190.526s] progress: 115867648 nodes, best cost 351, pool 0, idle 0
+[  200.526s] progress: 121430016 nodes, best cost 351, pool 0, idle 0
+[  210.526s] progress: 127442944 nodes, best cost 351, pool 0, idle 0
+[  220.526s] progress: 133193728 nodes, best cost 351, pool 0, idle 0
+[  230.526s] progress: 139288576 nodes, best cost 351, pool 0, idle 0

@@ -1,0 +1,32 @@
+[    0.158s] instance prob_42.sop: N=42
+[    0.158s] preprocessing: start=0 end=41 dummies=0
+[    0.159s] topology: 1 usable CPUs, 1 NUMA node ids (1 with memory)
+[    0.159s] phase 1: iterated local search on 4 thread(s) for up to 0.37s
+[    0.160s] new best cost: 392 (ILS)
+[    0.160s] new best cost: 363 (ILS)
+[    0.160s] new best cost: 336 (ILS)
+[    0.160s] new best cost: 308 (ILS)
+[    0.160s] new best cost: 304 (ILS)
+[    0.161s] new best cost: 293 (ILS)
+[    0.161s] new best cost: 280 (ILS)
+[    0.165s] new best cost: 263 (ILS)
+[    0.175s] new best cost: 262 (ILS)
+[    0.177s] new best cost: 258 (ILS)
+[    0.231s] new best cost: 257 (ILS)
+[    0.276s] new best cost: 250 (ILS)
+[    0.393s] new best cost: 248 (ILS)
+[    0.528s] phase 1 done: best cost 248
+[    0.528s] phase 2: branch-and-bound on 4 thread(s)
+[    0.528s] dominance table: 0.50 GiB
+[   10.528s] progress: 5496832 nodes, best cost 248, pool 0, idle 0
+[   20.528s] progress: 12107776 nodes, best cost 248, pool 0, idle 0
+[   30.528s] progress: 18006016 nodes, best cost 248, pool 0, idle 0
+[   33.486s] new best cost: 247 (B&B)
+[   39.119s] new best cost: 246 (B&B)
+[   39.150s] new best cost: 243 (B&B)
+[   40.528s] progress: 23928832 nodes, best cost 243, pool 0, idle 0
+[   50.528s] progress: 30086511 nodes, best cost 243, pool 0, idle 0
+[   60.529s] progress: 35749888 nodes, best cost 243, pool 0, idle 0
+[   64.020s] root assignment lower bound: 174
+[   64.020s] validation OK: permutation, precedence, cost 243
+[   64.020s] result: cost 243, proven optimal, 37744429 nodes
