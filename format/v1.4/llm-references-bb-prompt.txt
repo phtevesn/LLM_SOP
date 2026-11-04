@@ -1,0 +1,18 @@
+Review the program you developed once more and only with respect to 
+the Branch and Bound algorithm give: (1) technique name; (2) where it appears in the code; 
+(3) classification: established named algorithm / adaptation of an established one / 
+custom heuristic; (4) your confidence in that classification and why; (5) the likely 
+original source as author + title + approximate year, plus search terms I can use 
+to verify it. If you derived this technique on your own use yourself as the author. If 
+there are multiple possiblities of sources, include all of them.
+
+This includes things such as upper bound calculations, lower bound calculations, and 
+additional pruning techniques. I do not need content related to miniscule things such as 
+how bitsets are calculated or techniques done during preprocessing focus specifically on the 
+full branch and bound algorithmic process. 
+
+Rules: don’t invent URLs or citations. If you aren’t sure of a source, say so. 
+Don’t call something original if it is a variation of a known method. Be explicit that 
+you’re describing what the code resembles, not recalling how you wrote it.
+
+Keep descriptions to 2–3 sentences each. I’ll ask for deeper write-ups on specific items afterward.
