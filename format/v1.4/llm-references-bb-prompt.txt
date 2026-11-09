@@ -16,3 +16,9 @@ Don’t call something original if it is a variation of a known method. Be expli
 you’re describing what the code resembles, not recalling how you wrote it.
 
 Keep descriptions to 2–3 sentences each. I’ll ask for deeper write-ups on specific items afterward.
+
+
+FOLLOW UP
+With respect to the techniques you utilized above, can you verify whether you used those techniques 
+as a result of them being used in solving the TSP or SOP in other studies or if you came up with your
+own logic in applying them towards this SOP solver you generated. 
