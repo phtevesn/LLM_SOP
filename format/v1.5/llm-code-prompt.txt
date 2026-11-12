@@ -64,7 +64,9 @@ PROGRAM REQUIREMENTS
   gets a header unless --no-header is given.
 - If you use an algorithm that tracks the current best cost, the program must log to stderr an update
   in the best known cost including the new cost.
--
+- In-line comments. For each .cpp file that is written, include a summary at the top of each file that 
+  explains the purpose of that file. Additional comments within the code should be focused on defining 
+  the name of the algorithm and the specific part of the algorithm that part of the code performs. 
 
 OUTPUT (CSV, one data row per run, preceded by a header row unless --no-header is given)
 Instance,Instance Size,Time,Enumerated Nodes,Best Cost,Best Path,Optimal
@@ -86,10 +88,58 @@ Create a README.md that includes.
 - Section 2: Exact commands to build and run with an example
 - Section 3: Input and output format descriptions
 - Section 4: Name and descriptions of the reasoning for algorithmic choices.
+Create an ALGORITHMS.md that includes an inventory of every algorithmic
+technique used in the program, organized into three distinct tables:
+TABLE 1 - PREPROCESSING: everything done to the input before the search for
+a solution begins (e.g. parsing, building precedence or predecessor
+structures, graph reductions, deriving start/end nodes, data-layout
+preparation, computing static bounds or tables).
+TABLE 2 - COMPUTATION: every technique used to find a solution and to prove
+it optimal. Group the rows under these sub-headings (omit a sub-heading if
+unused, add one if needed):
+  2a. Search strategy (e.g. branch and bound, DP, branching order)
+  2b. Upper bounding / heuristics (finding good feasible solutions)
+  2c. Lower bounding (relaxations, bounds used for pruning)
+  2d. Pruning, dominance, and symmetry/redundancy elimination
+  2e. Parallelization and NUMA handling (work distribution, load balancing,
+      shared incumbent, memory placement)
+  2f. Optimality proof and termination logic (how and when the program
+      concludes the result is proven optimal)
+TABLE 3 - POSTPROCESSING: everything done after the search ends (e.g. path
+validity check, cost recomputation, CSV formatting, output writing).
+Every table uses the same columns:
+  1. Technique name
+  2. Where it appears in code (file and function/class)
+  3. Description of the algorithm
+  4. Classification 1: established named algorithm / adaptation of an
+     established algorithm / custom algorithm
+  5. Classification 2: was this algorithm used in solving the TSP or SOP /
+     was a version of this algorithm used in solving the TSP or SOP /
+     this algorithm has not been used in solving the TSP or SOP
+  6. Source (author, title, year). If the technique is your own, write only
+     "the model" as the author.
+  7. Reasoning for this implementation
+
+Rules: every technique in the code must appear in exactly one table, and no
+technique may be listed that is not in the code. A technique that belongs in
+more than one phase goes in the table where it does the most work, with a
+note in the others.
+
+Create a DEVELOPMENT.md that includes. 
+- The initial plan and the alternatives considered, such as DP, plain branch-and-bound, B&B 
+  with a heuristic upper bound, and hybrids. For each alternative, say why it was kept or dropped.
+- Bugs or dead ends hit along the way, and how they were resolved.
+- Design decisions that changed during development, and what triggered each change.
+- Separate what you actually compiled, ran, and measured from what you only 
+  reasoned about. Do not report benchmark numbers or test results you did not produce. List 
+  anything untested as untested.
+
 
 DELIVERABLES
 1. The full source code (complete files, not snippets).
 2. README.md
+3. ALGORITHMS.md 
+4. DEVELOPMENT.md
 
 NOTE: attached are 3 examples of what the input looks like. the examples provided are
 not the largest instances, the instances can scale up to a max N <= 1000.
