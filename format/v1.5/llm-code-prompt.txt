@@ -64,6 +64,7 @@ PROGRAM REQUIREMENTS
   gets a header unless --no-header is given.
 - If you use an algorithm that tracks the current best cost, the program must log to stderr an update
   in the best known cost including the new cost.
+-
 
 OUTPUT (CSV, one data row per run, preceded by a header row unless --no-header is given)
 Instance,Instance Size,Time,Enumerated Nodes,Best Cost,Best Path,Optimal
