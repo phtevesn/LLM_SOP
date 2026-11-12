@@ -3,7 +3,8 @@ Write a complete, runnable program that generates optimal solution to the Sequen
 Ordering Problem(SOP) instances from .sop files. This program should be able to 
 find the optimal solution and be able to prove the result is optimal. This program
 should be the most robust, state-of-the-art, time efficient program possible while
-still finding the optimal solution. Include documentation explaining how to run it.
+still finding the optimal solution. Include documentation that explains how to run the program 
+and algorithmic descriptions, reasoning, and references.
 This should be a complete, production-quality project with a deliberate, modular, readable 
 architecture. 
 NOTE: This should be the BEST SOP program you can create against any instance I provide
