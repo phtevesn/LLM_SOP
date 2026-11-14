@@ -1,0 +1,20 @@
+make: jobserver mkfifo: /tmp/GMfifo5: File exists
+mkdir -p build-final
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/common.cpp -o build-final/common.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/instance.cpp -o build-final/instance.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/assignment.cpp -o build-final/assignment.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/heuristics.cpp -o build-final/heuristics.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/history.cpp -o build-final/history.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/dominance.cpp -o build-final/dominance.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/tail_dp.cpp -o build-final/tail_dp.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/parallel.cpp -o build-final/parallel.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/solver.cpp -o build-final/solver.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/cli.cpp -o build-final/cli.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c src/main.cpp -o build-final/main.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -MMD -MP -c tests/core_tests.cpp -o build-final/core_tests.o
+g++  build-final/common.o build-final/instance.o build-final/assignment.o build-final/heuristics.o build-final/history.o build-final/dominance.o build-final/tail_dp.o build-final/parallel.o build-final/solver.o build-final/cli.o build-final/main.o -pthread -o build-final/sop_exact
+g++  build-final/common.o build-final/instance.o build-final/assignment.o build-final/heuristics.o build-final/history.o build-final/dominance.o build-final/tail_dp.o build-final/parallel.o build-final/solver.o build-final/cli.o build-final/core_tests.o -pthread -o build-final/core_tests
+build-final/core_tests
+core tests passed: 160 random DAGs, 1543 incremental restrictions, exhaustive assignment/SOP oracles, collision cases, 80 local-search checks
+python3 tests/integration.py --solver build-final/sop_exact
+integration passed: 180 independent-DP cases; N=64/65/130 two-chain oracles; parser/CSV/deadline/signal cases; N=1000; 32-worker timeout

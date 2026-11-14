@@ -1,0 +1,12 @@
+make: jobserver mkfifo: /tmp/GMfifo5: File exists
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -MMD -MP -c src/instance.cpp -o build-asan/instance.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -MMD -MP -c src/assignment.cpp -o build-asan/assignment.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -MMD -MP -c src/heuristics.cpp -o build-asan/heuristics.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -MMD -MP -c src/dominance.cpp -o build-asan/dominance.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -MMD -MP -c src/tail_dp.cpp -o build-asan/tail_dp.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -MMD -MP -c src/parallel.cpp -o build-asan/parallel.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -MMD -MP -c src/solver.cpp -o build-asan/solver.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -MMD -MP -c tests/core_tests.cpp -o build-asan/core_tests.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined -MMD -MP -c src/main.cpp -o build-asan/main.o
+g++ -fsanitize=address,undefined build-asan/common.o build-asan/instance.o build-asan/assignment.o build-asan/heuristics.o build-asan/history.o build-asan/dominance.o build-asan/tail_dp.o build-asan/parallel.o build-asan/solver.o build-asan/cli.o build-asan/core_tests.o -pthread -o build-asan/core_tests
+g++ -fsanitize=address,undefined build-asan/common.o build-asan/instance.o build-asan/assignment.o build-asan/heuristics.o build-asan/history.o build-asan/dominance.o build-asan/tail_dp.o build-asan/parallel.o build-asan/solver.o build-asan/cli.o build-asan/main.o -pthread -o build-asan/sop_exact

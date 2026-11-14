@@ -1,0 +1,40 @@
+nodes = 42, possible starts = 1, possible ends after symmetry reduction = 1, twin-order edges = 0
+best cost = 2282 (topological order, 0.000270397 s)
+best cost = 458 (initial greedy, 0.000316526 s)
+certified root lower bound = 183
+workers = 4, history budget = 256 MiB (shared), CPU/node: 0/-1 1/-1 2/-1 3/-1
+best cost = 423 (exact tail DP, 0.160622 s)
+best cost = 355 (exact tail DP, 0.160984 s)
+best cost = 349 (exact tail DP, 0.161273 s)
+best cost = 346 (exact tail DP, 0.161427 s)
+best cost = 335 (exact tail DP, 0.162028 s)
+best cost = 334 (exact tail DP, 0.171653 s)
+best cost = 330 (exact tail DP, 0.178478 s)
+best cost = 326 (exact tail DP, 0.18198 s)
+best cost = 323 (exact tail DP, 0.184936 s)
+best cost = 319 (exact tail DP, 0.189274 s)
+best cost = 312 (exact tail DP, 0.197198 s)
+best cost = 310 (exact tail DP, 0.198423 s)
+best cost = 305 (search probe, 0.260334 s)
+best cost = 303 (exact tail DP, 0.269726 s)
+best cost = 285 (search probe, 0.269926 s)
+best cost = 282 (exact tail DP, 0.347948 s)
+best cost = 275 (exact tail DP, 0.376278 s)
+best cost = 270 (exact tail DP, 0.396371 s)
+best cost = 268 (exact tail DP, 1.94441 s)
+best cost = 267 (exact tail DP, 3.43507 s)
+best cost = 266 (exact tail DP, 3.68309 s)
+best cost = 264 (exact tail DP, 3.75221 s)
+best cost = 262 (exact tail DP, 4.50523 s)
+best cost = 258 (exact tail DP, 6.08705 s)
+best cost = 256 (exact tail DP, 13.0179 s)
+best cost = 254 (exact tail DP, 23.1248 s)
+best cost = 251 (exact tail DP, 24.5918 s)
+best cost = 250 (assignment completion, 33.0116 s)
+best cost = 247 (exact tail DP, 37.3142 s)
+best cost = 243 (exact tail DP, 38.5159 s)
+worker 0: enumerated=16295368, tasks=44322, bound-prunes=4894616, dominance-prunes=457686, interchange-prunes=106120, tail-DP-calls=1673
+worker 1: enumerated=18604510, tasks=56148, bound-prunes=4703969, dominance-prunes=483289, interchange-prunes=101938, tail-DP-calls=2007
+worker 2: enumerated=34714600, tasks=35000, bound-prunes=5012714, dominance-prunes=565629, interchange-prunes=118393, tail-DP-calls=4456
+worker 3: enumerated=32691589, tasks=1, bound-prunes=5057175, dominance-prunes=682273, interchange-prunes=129034, tail-DP-calls=4059
+optimality proven: all improving alternatives eliminated

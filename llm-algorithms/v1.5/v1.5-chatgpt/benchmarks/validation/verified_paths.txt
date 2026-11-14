@@ -1,0 +1,4 @@
+row 1: valid path, independently recomputed cost 256; Optimal field is a solver claim, not verified here
+row 2: valid path, independently recomputed cost 351; Optimal field is a solver claim, not verified here
+row 3: valid path, independently recomputed cost 1404; Optimal field is a solver claim, not verified here
+row 1: valid path, independently recomputed cost 243; Optimal field is a solver claim, not verified here

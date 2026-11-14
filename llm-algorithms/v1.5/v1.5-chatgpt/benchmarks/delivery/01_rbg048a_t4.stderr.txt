@@ -1,0 +1,16 @@
+nodes = 50, possible starts = 1, possible ends after symmetry reduction = 1, twin-order edges = 0
+best cost = 856 (topological order, 0.000338158 s)
+best cost = 484 (initial greedy, 0.000486481 s)
+certified root lower bound = 337
+workers = 4, history budget = 256 MiB (shared), CPU/node: 0/-1 1/-1 2/-1 3/-1
+best cost = 393 (precedence-safe local search, 0.067104 s)
+best cost = 376 (precedence-safe local search, 0.0675524 s)
+best cost = 374 (precedence-safe local search, 0.069259 s)
+best cost = 353 (precedence-safe local search, 0.0722161 s)
+best cost = 351 (precedence-safe local search, 0.0780484 s)
+worker 0: enumerated=14867040, tasks=1, bound-prunes=8914868, dominance-prunes=5483381, interchange-prunes=2279352, tail-DP-calls=0
+worker 1: enumerated=13996727, tasks=3, bound-prunes=8494973, dominance-prunes=4417326, interchange-prunes=2246287, tail-DP-calls=0
+worker 2: enumerated=11731978, tasks=608940, bound-prunes=6841639, dominance-prunes=3954402, interchange-prunes=1853975, tail-DP-calls=0
+worker 3: enumerated=15118838, tasks=1, bound-prunes=8993213, dominance-prunes=5359441, interchange-prunes=2254196, tail-DP-calls=0
+time limit reached; optimality not proven
+result is not proven optimal

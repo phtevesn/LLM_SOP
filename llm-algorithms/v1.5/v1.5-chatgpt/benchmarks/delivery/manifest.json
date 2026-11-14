@@ -1,0 +1,70 @@
+{
+  "started_utc": "2026-11-14T08:12:12.180667+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "binary_sha256": "eb7e364d1f8a4eb7b38af27931055e3a488e67bf4085afaac8d050a820f2c798",
+  "runs": [
+    {
+      "command": [
+        "/workspace/scratch/56232d013453/sop_exact/build/sop_exact",
+        "examples/prob.42.sop",
+        "--threads",
+        "4",
+        "--time-limit",
+        "60.0",
+        "--history-mb",
+        "256",
+        "--output",
+        "benchmarks/delivery/results.csv"
+      ],
+      "returncode": 0,
+      "input_sha256": "d6fd90852a499d2f9a80f6e4e45d60de6873e205586f3c883f508e9161ed56db",
+      "log": "00_prob.42_t4.stderr.txt"
+    },
+    {
+      "command": [
+        "/workspace/scratch/56232d013453/sop_exact/build/sop_exact",
+        "examples/rbg048a.sop",
+        "--threads",
+        "4",
+        "--time-limit",
+        "60.0",
+        "--history-mb",
+        "256",
+        "--output",
+        "benchmarks/delivery/results.csv"
+      ],
+      "returncode": 0,
+      "input_sha256": "974273fcae040fe2c8e3f1c3733e7265a5d8d17570666b1d60e2fd8d9c1c6a9e",
+      "log": "01_rbg048a_t4.stderr.txt"
+    },
+    {
+      "command": [
+        "/workspace/scratch/56232d013453/sop_exact/build/sop_exact",
+        "examples/R.200.1000.1.sop",
+        "--threads",
+        "4",
+        "--time-limit",
+        "60.0",
+        "--history-mb",
+        "256",
+        "--output",
+        "benchmarks/delivery/results.csv"
+      ],
+      "returncode": 0,
+      "input_sha256": "15a70193a1eb581649ef32a7266c0dc249b3c2eb1603c8cb9cdfb0e5c091eed3",
+      "log": "02_R.200.1000.1_t4.stderr.txt"
+    }
+  ]
+}

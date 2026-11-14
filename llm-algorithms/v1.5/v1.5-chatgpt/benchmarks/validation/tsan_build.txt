@@ -1,0 +1,9 @@
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=thread -MMD -MP -c src/instance.cpp -o build-tsan/instance.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=thread -MMD -MP -c src/assignment.cpp -o build-tsan/assignment.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=thread -MMD -MP -c src/heuristics.cpp -o build-tsan/heuristics.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=thread -MMD -MP -c src/dominance.cpp -o build-tsan/dominance.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=thread -MMD -MP -c src/tail_dp.cpp -o build-tsan/tail_dp.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=thread -MMD -MP -c src/parallel.cpp -o build-tsan/parallel.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=thread -MMD -MP -c src/solver.cpp -o build-tsan/solver.o
+g++ -Iinclude -std=c++17 -Wall -Wextra -Wpedantic -pthread -O3 -DNDEBUG -O1 -g -fno-omit-frame-pointer -fsanitize=thread -MMD -MP -c src/main.cpp -o build-tsan/main.o
+g++ -fsanitize=thread build-tsan/common.o build-tsan/instance.o build-tsan/assignment.o build-tsan/heuristics.o build-tsan/history.o build-tsan/dominance.o build-tsan/tail_dp.o build-tsan/parallel.o build-tsan/solver.o build-tsan/cli.o build-tsan/main.o -pthread -o build-tsan/sop_exact

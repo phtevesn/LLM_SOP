@@ -1,0 +1,4 @@
+nodes = 3, possible starts = 3, possible ends after symmetry reduction = 3, twin-order edges = 0
+best cost = 100 (topological order, 0.000147111 s)
+best cost = 2 (root assignment, 0.000175764 s)
+certified root lower bound = 2
