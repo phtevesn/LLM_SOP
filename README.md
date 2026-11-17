@@ -1,17 +1,19 @@
 # This README covers each version and what each solves. 
 
 ## TODO
-
-- [x] specify c++17
-- [x] list references used!
-- [ ] algorithm info
-  - [ ] if existing algorithms used, list those specific references
-  - [ ] otherwise, explain new algorithms
   - focus on pruning techniques, main difference between different BnB algorithms
 
 ## Versions
+### v1.5
+11/8/2026 <br>
+**Models** <br>
+ChatGPT Astra 6 (Ultra), Claude Sonnet 5.5 (High), Gemini Argon 4 (High) <br>
+**Description** <br>
+Integrated the two prompts from v1.4 into one complete prompt to propertly document and have an easier time 
+reading the code and understanding the implemented algorithms. <br>
+
 ### v1.4
-10/23/2026 - current <br>
+10/23/2026 - 11/8/2026 <br>
 **Models** <br>
 ChatGPT Astra 6 (Extra High), Claude Sonnet 5.5 (High), Gemini Argon 4 (High) <br>
 **Description** <br> 
