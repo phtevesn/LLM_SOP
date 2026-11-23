@@ -1,0 +1,1 @@
+core tests passed: 160 random DAGs, 1543 incremental restrictions, exhaustive assignment/SOP oracles, collision cases, 80 local-search checks

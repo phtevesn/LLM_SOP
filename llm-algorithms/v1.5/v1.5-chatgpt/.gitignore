@@ -1,0 +1,4 @@
+build*/
+__pycache__/
+*.csv.tmp
+*.log.tmp

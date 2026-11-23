@@ -1,0 +1,12 @@
+NAME: free_endpoints
+TYPE: SOP
+COMMENT: Three nodes; optimum starts at 2 and ends at 1, cost 2.
+DIMENSION: 3
+EDGE_WEIGHT_TYPE: EXPLICIT
+EDGE_WEIGHT_FORMAT: FULL_MATRIX
+EDGE_WEIGHT_SECTION
+3
+0 1 99
+99 0 99
+1 99 0
+EOF

@@ -1,0 +1,29 @@
+best cost = 2282 (topological order, 0.000274173 s)
+nodes = 42, possible starts = 1, possible ends after symmetry reduction = 1, twin-order edges = 0
+best cost = 458 (initial greedy, 0.000370887 s)
+certified root lower bound = 183
+workers = 4, history budget = 256 MiB (shared), CPU/node: 0/-1 1/-1 2/-1 3/-1
+best cost = 341 (precedence-safe local search, 1.01035 s)
+best cost = 315 (precedence-safe local search, 1.01078 s)
+best cost = 292 (precedence-safe local search, 1.0125 s)
+best cost = 290 (precedence-safe local search, 1.03272 s)
+best cost = 273 (precedence-safe local search, 1.03576 s)
+best cost = 272 (precedence-safe local search, 1.04706 s)
+best cost = 270 (exact tail DP, 1.39033 s)
+best cost = 268 (exact tail DP, 5.00021 s)
+best cost = 267 (exact tail DP, 8.18946 s)
+best cost = 266 (exact tail DP, 8.69493 s)
+best cost = 264 (exact tail DP, 8.84668 s)
+best cost = 262 (exact tail DP, 14.6866 s)
+best cost = 258 (exact tail DP, 16.6358 s)
+best cost = 256 (exact tail DP, 37.2986 s)
+best cost = 254 (exact tail DP, 59.1334 s)
+best cost = 251 (exact tail DP, 62.7625 s)
+best cost = 250 (assignment completion, 97.6563 s)
+best cost = 247 (exact tail DP, 99.427 s)
+best cost = 243 (exact tail DP, 105.177 s)
+worker 0: enumerated=27053846, tasks=6, bound-prunes=4843591, dominance-prunes=631962, interchange-prunes=123561, tail-DP-calls=3210
+worker 1: enumerated=34257078, tasks=39355, bound-prunes=4827685, dominance-prunes=540245, interchange-prunes=116712, tail-DP-calls=4148
+worker 2: enumerated=16333471, tasks=46434, bound-prunes=4079522, dominance-prunes=421642, interchange-prunes=91028, tail-DP-calls=1591
+worker 3: enumerated=8936826, tasks=90953, bound-prunes=4046178, dominance-prunes=370235, interchange-prunes=79957, tail-DP-calls=680
+optimality proven: all improving alternatives eliminated

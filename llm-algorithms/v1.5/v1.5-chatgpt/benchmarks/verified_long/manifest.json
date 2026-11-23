@@ -1,0 +1,36 @@
+{
+  "started_utc": "2026-11-14T19:29:21.983675+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "binary_sha256": "df6cd54392ca93e0bbcd88ffca00097e04a52323a72128c69c3997b35a581186",
+  "runs": [
+    {
+      "command": [
+        "/workspace/scratch/56232d013453/sop_exact/build-final/sop_exact",
+        "examples/prob.42.sop",
+        "--threads",
+        "4",
+        "--time-limit",
+        "180.0",
+        "--history-mb",
+        "256",
+        "--output",
+        "benchmarks/verified_long/results.csv"
+      ],
+      "returncode": 0,
+      "input_sha256": "d6fd90852a499d2f9a80f6e4e45d60de6873e205586f3c883f508e9161ed56db",
+      "log": "00_prob.42_t4.stderr.txt"
+    }
+  ]
+}
