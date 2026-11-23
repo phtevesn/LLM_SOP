@@ -5,7 +5,7 @@
 
 ## Versions
 ### v1.5
-11/8/2026 <br>
+11/8/2026 - current<br>
 **Models** <br>
 ChatGPT Astra 6 (Ultra), Claude Sonnet 5.5 (High), Gemini Argon 4 (High) <br>
 **Description** <br>
