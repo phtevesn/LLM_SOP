@@ -1,7 +1,8 @@
 # This README covers each version and what each solves. 
 
 ## TODO
-  - focus on pruning techniques, main difference between different BnB algorithms
+- teach the agents better (v2.0)
+  - context on our history table
 
 ## Versions
 ### v1.5
