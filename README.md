@@ -4,8 +4,20 @@
   - focus on pruning techniques, main difference between different BnB algorithms
 
 ## Versions
+### v2.0 
+**Models** <br>
+ChatGPT Astra 6 (Ultra), Claude Sonnet 5.5 (High) <br>
+**Description** <br>
+Starting from v2.x we begin working towards experimenting the best ways to educate the LLM's
+specific algorithmic techniques to improve the performance of their created SOP solver's as a result
+of the programs created under v1.5. Each change will be expressed incrementally one change at a time.
+For this first change we try to modify the programs created in v1.5 and adjust them such that they 
+integrate history domination without telling them how we have optimized utilizing history 
+domination in parallel. Earlier test on simply copying adding the published papers resulted in 
+regressions. As a result we will start integrating further changes one step at a time. 
+
 ### v1.5
-11/8/2026 - current<br>
+11/8/2026 - 11/22/26<br>
 **Models** <br>
 ChatGPT Astra 6 (Ultra), Claude Sonnet 5.5 (High), Gemini Argon 4 (High) <br>
 **Description** <br>
